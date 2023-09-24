@@ -30,7 +30,7 @@ def SinglePlotData(testf, derf, point, maxpwr):
     xdata = []
     ydata = []
     for i in range(maxpwr):
-        xdata.append(math.log(CalcDelta(i)))
+        xdata.append(math.log(CalcDelta(i + 1)))
         ydata.append(math.log(abs(derf(point, CalcDelta(i + 1), testf.func) - testf.deriv(point))))
     return xdata, ydata
 
@@ -38,10 +38,10 @@ test_samples = tests.TestFuncData()
 iter(test_samples)
 
 for j, tstf in enumerate(test_samples):
-    plt.figure(figsize=(13, 13))
+    plt.figure(figsize=(9, 5))
 
     for i in range(len(ApproxDerivs)):
-        x, y = SinglePlotData(tstf, ApproxDerivs[i], 9, 21)
+        x, y = SinglePlotData(tstf, ApproxDerivs[i], 8, 21)
         plt.plot(x, y, label = "Appr. function " + str(i + 1))
 
     plt.legend()
