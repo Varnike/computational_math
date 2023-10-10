@@ -11,22 +11,6 @@ import scipy.linalg
 import scipy
 import matplotlib.pyplot as plt
 import math
-# Solve equation Ax = b
-class LinEqSys:
-    def __init__(self, matrix, f):
-        assert np.shape(matrix)[0] == np.shape(matrix)[1]
-        assert np.shape(matrix)[0] == np.shape(f)[0]
-
-        self.matrix    = matrix
-        self.f         = f
-
-        self.dimension = np.shape(f)[0]
-        self.solution  = np.zeros(self.dimension)
-        self.is_solved = False
-
-    def solve_eq(self, solution_method):
-        self.solution = solution_method(self)
-        self.is_solved = True
 
 # Gauss method
 def gauss(A, b):
