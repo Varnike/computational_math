@@ -232,7 +232,7 @@ plot_error("Jacoby method", errs)
 # 5) For upper relaxation method we need to 'guess' optimal w
 data = []
 names = []
-for w in np.arange(1.0, 2.2, 0.2):
+for w in np.arange(1.0, 2.2, 0.1):
     w = math.ceil(w * 10) / 10
     x, dt = upper_relaxation(A, b, w, ITER)
     data.append(dt)
