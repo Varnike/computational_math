@@ -41,6 +41,6 @@ for k in range(0, len(x_plot)):
     app_plot[k] = (x_plot[k] - x[index - 1]) ** 3 / (6 * h) * coeffs[index] + (x[index] - x_plot[k]) ** 3 / (6 * h) * coeffs[index - 1] + (x_plot[k] - x[index - 1]) / h * (y[index] - h**2 * coeffs[index] / 6) + (x[index] - x_plot[k]) / h * (y[index - 1] - h**2 * coeffs[index - 1] / 6)
 
 plt.plot(x_plot, app_plot)
-plt.savefig("images/spline.png")
+plt.savefig("img/spline.png")
 plt.show()
 

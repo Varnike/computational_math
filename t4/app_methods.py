@@ -44,5 +44,5 @@ for k in range(0, len(x_plot)):
     app_pop[k] = res
 
 plt.plot(x_plot, app_pop)
-plt.savefig("images/newton.png")
+plt.savefig("img/newton.png")
 plt.show()

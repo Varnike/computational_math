@@ -48,6 +48,6 @@ for k in range(0, len(x_plot)):
     app_plot[k] = coeffs[0] * x_plot[k] ** 2 + coeffs[1] * x_plot[k] + coeffs[2]
 
 plt.plot(x_plot, app_plot)
-plt.savefig("images/least_square.png")
+plt.savefig("img/least_square.png")
 plt.show()
 
