@@ -8,9 +8,9 @@ population = {
     1990: 248709873, 2000: 281421906
 }
 
-plt.title("Newton method for population 1910-2010")
-plt.ylabel("Population")
-plt.xlabel("Year")
+plt.title("Newton method")
+plt.ylabel("population")
+plt.xlabel("year")
 
 # Newton's method
 x = list(population.keys())
