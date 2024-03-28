@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 def func_lab(t, y):
     return np.array([y[1], math.exp(1) * (1 - y[0] ** 2) * y[1] - y[0]])
 
+# Runge–Kutta 4th order method
 def RK_4th_ord(h, t, y, func):
     stepcnt = np.shape(y)[0]
     for j in range(1, np.shape(t)[0]):
@@ -45,7 +46,6 @@ def euler_1st_ord(h, t, y, func):
 
     return t, y
 
-# Runge–Kutta 4th order method
 def eq_solver(h, t1, t2, x0, func, method):
     stepcnt = int((t2 - t1) / h) + 1
     t = np.linspace(t1, t2, stepcnt)
