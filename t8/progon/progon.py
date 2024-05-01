@@ -62,23 +62,20 @@ def plot_solutions(X, Y, h):
     plt.plot(np.arange(0, 4.0, h), np.tile(Y, 4))
     plt.show()
 
-def main():
-    A = np.zeros(N)
-    B = np.zeros(N)
-    C = np.zeros(N)
-    r = np.zeros(N)
-    h2 = h**2
+# initial values
+A = np.zeros(N)
+B = np.zeros(N)
+C = np.zeros(N)
+r = np.zeros(N)
+h2 = h**2
 
-    for i in range(0, N):
-        A[i] = 1.0
-        B[i] = 2.0 + P2(i * h) * h2
-        C[i] = 1.0
-        r[i] = f(i * h) * h2
+for i in range(0, N):
+    A[i] = 1.0
+    B[i] = 2.0 + P2(i * h) * h2
+    C[i] = 1.0
+    r[i] = f(i * h) * h2
 
-    Y = progon(A, B, C, r, N)
-    X = np.arange(0, 1.0, h)
-
-    plot_solutions(X, Y, h)
-    
-if __name__ == "__main__":
-  main()
+# solve and plot
+Y = progon(A, B, C, r, N)
+X = np.arange(0, 1.0, h)
+plot_solutions(X, Y, h)
